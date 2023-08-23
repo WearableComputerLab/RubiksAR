@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="rubix_marker_2" size="0.050000 0.050000" />
+    <ImageTarget name="rubix_marker" size="0.150000 0.150000" />
+  </Tracking>
+</QCARConfig>
