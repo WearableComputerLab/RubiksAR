@@ -14,7 +14,7 @@ public class WebClient : MonoBehaviour
 
 
     public bool serverConnect = false;
-
+    public string serverAddress;
 
     private string _colorString;
     private Dictionary<string, int> _colorValues;
@@ -41,7 +41,7 @@ public class WebClient : MonoBehaviour
     {
         if (!serverConnect) return;
         
-        ws = new WebSocket("ws://10.220.98.111:5564");
+        ws = new WebSocket("ws://" + serverAddress + ":5564");
     }
 
     // Update is called once per frame
@@ -91,6 +91,7 @@ public class WebClient : MonoBehaviour
 
     private void SortDataIntoValues(string data)
     {
+        if (ws == null) return; 
         if (!data.Contains("GET:")) return;
 
         var colorString = data.Replace("GET:", "");
@@ -122,6 +123,11 @@ public class WebClient : MonoBehaviour
 
     public void SendGetRequest()
     {
-        ws.Send("GET");
+        ws?.Send("GET");
+    }
+
+    public void SendStreamPush(string marker)
+    {
+        ws?.Send("MARKER:" + marker);
     }
 }
