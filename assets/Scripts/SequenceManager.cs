@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Microsoft.MixedReality.Toolkit.Input;
+using Microsoft.MixedReality.Toolkit.SpatialManipulation;
 using Microsoft.MixedReality.Toolkit.UX;
 using TMPro;
 using UnityEngine;
@@ -21,8 +22,11 @@ public class SequenceManager : MonoBehaviour
     private int _startingTask;
     private float _time;
     private bool _canSendGaze;
+    private bool _alignmentActive;
     
     public bool autoStart;
+    public GameObject origin;
+    public SimpleOutlet outlet;
     public CueVis cueVis;
     public NumberVis numVis;
     public ChartVis chartVis;
@@ -69,6 +73,7 @@ public class SequenceManager : MonoBehaviour
             StartCoroutine(RunMainSequence());
         }
         startButton.transform.parent.gameObject.SetActive(false);
+        
         _experimentPaused = false;
         infoVis.gameObject.SetActive(false);
         // WebClient.Instance.SendStreamPush("01");
@@ -89,9 +94,21 @@ public class SequenceManager : MonoBehaviour
         infoVis.text = "Press start when ready";
         infoVis.gameObject.SetActive(true);
     }
+
+    private void ToggleAlignment(bool toggle)
+    {
+        _alignmentActive = toggle;
+        origin.GetComponent<ObjectManipulator>().enabled = toggle;
+        origin.GetComponent<BoundsControl>().enabled = toggle;
+    }
     
     private void Update()
     {
+        if (Input.GetKeyUp(KeyCode.L))
+        {
+            ToggleAlignment(!_alignmentActive);
+        }
+        
         if (_experimentPaused) return;
         if (!_canSendGaze) return;
         
@@ -181,14 +198,14 @@ public class SequenceManager : MonoBehaviour
 
         if (correct)
         {
-            //outlet.PushSample("20");
-            if(!practice) WebClient.Instance.SendStreamPush("20");
+            if (!practice) outlet.SendMarker("20");
+            // if(!practice) WebClient.Instance.SendStreamPush("20");
             numVis.UpdateNumbers();
         }
         else
         {
-            //outlet.PushSample("30");
-            if(!practice) WebClient.Instance.SendStreamPush("30");
+            if (!practice) outlet.SendMarker("30");
+            // if(!practice) WebClient.Instance.SendStreamPush("30");
             numVis.UpdateNumbersWrong(wrongNumbers);
         }
         if (!practice) _canSendGaze = true;         
@@ -202,14 +219,14 @@ public class SequenceManager : MonoBehaviour
 
         if (correct)
         {
-            //outlet.PushSample("21");
-            if (!practice) WebClient.Instance.SendStreamPush("21");
+            if (!practice) outlet.SendMarker("21");
+            // if (!practice) WebClient.Instance.SendStreamPush("21");
             chartVis.UpdateChart();
         }
         else
         {
-            //outlet.PushSample("31");
-            if (!practice) WebClient.Instance.SendStreamPush("31");
+            if (!practice) outlet.SendMarker("31");
+            // if (!practice) WebClient.Instance.SendStreamPush("31");
             chartVis.UpdateChartWrong(wrongNumbers);
         }
         if(!practice) _canSendGaze = true;
@@ -253,21 +270,26 @@ public class SequenceManager : MonoBehaviour
         {
             var trials = RandomiseTrials(trialCount, falseTrialCount);
             
-            WebClient.Instance.SendStreamPush(run % 2 == _startingTask ? "10" : "11");
+            outlet.SendMarker(run % 2 == _startingTask ? "10" : "11");
+            // WebClient.Instance.SendStreamPush(run % 2 == _startingTask ? "10" : "11");
             
             for (int trial = 0; trial < trialCount; trial++)
             {
                 WebClient.Instance.SendTrialCounter(+1, trial + 1, trials[trial]);
-                WebClient.Instance.SendStreamPush(run % 2 == _startingTask ? "50" : "51");
+                outlet.SendMarker(run % 2 == _startingTask ? "50" : "51");
+                // WebClient.Instance.SendStreamPush(run % 2 == _startingTask ? "50" : "51");
                 yield return SequenceInitSetup();
 
-                WebClient.Instance.SendStreamPush("02");
+                // WebClient.Instance.SendStreamPush("02");
+                outlet.SendMarker("02");
                 yield return SequenceShowCues();
                 
-                WebClient.Instance.SendStreamPush("05");
+                // WebClient.Instance.SendStreamPush("05");
+                outlet.SendMarker("05");
                 yield return SequenceDataRequest();
 
-                WebClient.Instance.SendStreamPush("03");
+                // WebClient.Instance.SendStreamPush("03");
+                outlet.SendMarker("03");
                 yield return SequenceShowFrame();
                 
                 
@@ -283,11 +305,13 @@ public class SequenceManager : MonoBehaviour
                 frameVisCross.SetActive(true);
                 frameVis.gameObject.SetActive(false);
                 _canSendGaze = false;
-                WebClient.Instance.SendStreamPush("04");
+                outlet.SendMarker("04");
+                // WebClient.Instance.SendStreamPush("04");
                 yield return new WaitForSeconds(0.75f);
                 
             }
-            WebClient.Instance.SendStreamPush(run % 2 == _startingTask ? "40" : "41");
+            // WebClient.Instance.SendStreamPush(run % 2 == _startingTask ? "40" : "41");
+            outlet.SendMarker(run % 2 == _startingTask ? "40" : "41");
             
             if (run == runCount - 1)
             {
