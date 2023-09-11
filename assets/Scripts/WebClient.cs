@@ -130,4 +130,14 @@ public class WebClient : MonoBehaviour
     {
         ws?.Send("MARKER:" + marker);
     }
+
+    public void SendTrialCounter(int run, int trial, bool falseAnswer)
+    {
+        ws?.Send("RUN/TRIAL:" + run + "/" + trial + " False Answer: " + falseAnswer);
+    }
+
+    public void SendInfo(string message)
+    {
+        ws?.Send("INFO: " + message);
+    }
 }
