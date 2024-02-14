@@ -140,4 +140,9 @@ public class WebClient : MonoBehaviour
     {
         ws?.Send("INFO: " + message);
     }
+
+    public void Send(string message)
+    {
+        ws?.Send(message);
+    }
 }

@@ -12,18 +12,23 @@ using Random = System.Random;
 
 public class SequenceManager : MonoBehaviour
 {
+
+    public enum Task { Numbers = 0, Graph = 1}
+
+    [Header("Experiment Settings")]
     public int runCount = 2;
     public int trialCount = 6; 
     public int falseTrialCount = 3;
+    public Task startingTask = Task.Numbers;
     
 
     private bool _experimentStarted;
     private bool _experimentPaused = true;
-    private int _startingTask;
     private float _time;
     private bool _canSendGaze;
-    private bool _alignmentActive;
-    
+    private bool _alignmentActive = true;
+
+    [Header("Tools")]
     public bool autoStart;
     public GameObject origin;
     public SimpleOutlet outlet;
@@ -35,10 +40,12 @@ public class SequenceManager : MonoBehaviour
     public GameObject frameVis;
     public GameObject frameVisCross;
     public GameObject arrowVis;
+
     
     public PressableButton startButton;
     public PressableButton trainingButton;
 
+    public MRTKRayInteractor[] rayInteractors;
     public FuzzyGazeInteractor gazeInteractor;
 
     private Vector3 _counterPos;
@@ -58,10 +65,10 @@ public class SequenceManager : MonoBehaviour
     }
 
 
-    public void SelectStartingTask(bool value)
+    public void SelectStartingTask(Task value)
     {
-        _startingTask = value ? 0 : 1;
-        infoVis.text = "Press start when ready";
+        startingTask = value;
+        //infoVis.text = "Press start when ready";
     }
     
     public void StartExperiment()
@@ -69,20 +76,19 @@ public class SequenceManager : MonoBehaviour
         if (!_experimentStarted)
         {
             _experimentStarted = true;
-            _experimentPaused = false;
             StartCoroutine(RunMainSequence());
         }
-        startButton.transform.parent.gameObject.SetActive(false);
+        if (!_experimentPaused) return;
+        //startButton.transform.parent.gameObject.SetActive(false);
         
         _experimentPaused = false;
         infoVis.gameObject.SetActive(false);
-        // WebClient.Instance.SendStreamPush("01");
     }
 
     public void StartTraining()
     {
         StartCoroutine(RunTrainingSequence());
-        startButton.transform.parent.gameObject.SetActive(false);
+        //startButton.transform.parent.gameObject.SetActive(false);
         _experimentPaused = false;
         infoVis.gameObject.SetActive(false);
     }
@@ -90,16 +96,23 @@ public class SequenceManager : MonoBehaviour
     private void PauseExperiment()
     {
         _experimentPaused = true;
-        startButton.transform.parent.gameObject.SetActive(true);
-        infoVis.text = "Press start when ready";
+        //startButton.transform.parent.gameObject.SetActive(true);
+        infoVis.text = "Task complete, start when ready";
         infoVis.gameObject.SetActive(true);
     }
 
     private void ToggleAlignment(bool toggle)
     {
+        Debug.Log("Alignment active: " + toggle);
         _alignmentActive = toggle;
         origin.GetComponent<ObjectManipulator>().enabled = toggle;
         origin.GetComponent<BoundsControl>().enabled = toggle;
+        origin.GetComponent<BoxCollider>().enabled = toggle;
+        cueVis.gameObject.SetActive(toggle);
+        foreach(var interactor in rayInteractors)
+        {
+            interactor.gameObject.SetActive(toggle);
+        }
     }
     
     private void Update()
@@ -107,6 +120,14 @@ public class SequenceManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.L))
         {
             ToggleAlignment(!_alignmentActive);
+        }
+        if (Input.GetKeyUp(KeyCode.T))
+        {
+            StartTraining();
+        }
+        if (Input.GetKeyUp(KeyCode.K))
+        {
+            StartExperiment();
         }
         
         if (_experimentPaused) return;
@@ -116,7 +137,8 @@ public class SequenceManager : MonoBehaviour
         if (!(_time > 0.02f)) return;
         var eyePos = gazeInteractor.rayEndPoint;
         // Debug.LogError(eyePos);
-        WebClient.Instance.SendStreamPush("GAZE:" + eyePos);
+        //WebClient.Instance.SendStreamPush("GAZE:" + eyePos);
+        outlet.SendGaze(eyePos.ToString());
         _time = 0f;
     }
 
@@ -174,6 +196,7 @@ public class SequenceManager : MonoBehaviour
         arrowVis.SetActive(true);
 
         _newData = false;
+        WebClient.Instance.Send("RESET");
         StartCoroutine(DataRequest());
         
         yield return new WaitUntil(() => _newData);
@@ -270,13 +293,13 @@ public class SequenceManager : MonoBehaviour
         {
             var trials = RandomiseTrials(trialCount, falseTrialCount);
             
-            outlet.SendMarker(run % 2 == _startingTask ? "10" : "11");
+            outlet.SendMarker(run % 2 == (int) startingTask ? "10" : "11");
             // WebClient.Instance.SendStreamPush(run % 2 == _startingTask ? "10" : "11");
             
             for (int trial = 0; trial < trialCount; trial++)
             {
-                WebClient.Instance.SendTrialCounter(+1, trial + 1, trials[trial]);
-                outlet.SendMarker(run % 2 == _startingTask ? "50" : "51");
+                WebClient.Instance.SendTrialCounter(run + 1, trial + 1, trials[trial]);
+                outlet.SendMarker(run % 2 == (int) startingTask ? "50" : "51");
                 // WebClient.Instance.SendStreamPush(run % 2 == _startingTask ? "50" : "51");
                 yield return SequenceInitSetup();
 
@@ -293,7 +316,7 @@ public class SequenceManager : MonoBehaviour
                 yield return SequenceShowFrame();
                 
                 
-                if(run % 2 == _startingTask)
+                if(run % 2 == (int) startingTask)
                 {
                     yield return SequenceShowNumberVis(trials[trial], false);
                 }
@@ -311,14 +334,14 @@ public class SequenceManager : MonoBehaviour
                 
             }
             // WebClient.Instance.SendStreamPush(run % 2 == _startingTask ? "40" : "41");
-            outlet.SendMarker(run % 2 == _startingTask ? "40" : "41");
+            outlet.SendMarker(run % 2 == (int) startingTask ? "40" : "41");
             
             if (run == runCount - 1)
             {
                 infoVis.text = "End of experiment!";
                 infoVis.gameObject.SetActive(true);
             }
-            WebClient.Instance.SendInfo("Run " + run + " has ended!");
+            WebClient.Instance.SendInfo("Run " + run+1 + " has ended!");
             
             PauseExperiment(); 
             yield return new WaitUntil(() => _experimentPaused == false);
@@ -342,7 +365,7 @@ public class SequenceManager : MonoBehaviour
         while(!_newData)
         {
             WebClient.Instance.SendGetRequest();
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.4f);
         }
     }
 
