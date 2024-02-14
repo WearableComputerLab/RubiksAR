@@ -367,7 +367,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c6071c4723ca4740b5ee3b23033f9bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vuforiaTarget: {fileID: 793121655}
 --- !u!4 &17150269
 Transform:
   m_ObjectHideFlags: 0
@@ -384,7 +383,7 @@ Transform:
   - {fileID: 1663459286}
   - {fileID: 748758063}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &17150270
 MonoBehaviour:
@@ -638,6 +637,7 @@ MonoBehaviour:
         m_Calls: []
   disabledInteractorTypes:
   - reference: Microsoft.MixedReality.Toolkit.IPokeInteractor, Microsoft.MixedReality.Toolkit.Core
+  - reference: MixedReality.Toolkit.IPokeInteractor, MixedReality.Toolkit.Core
   <ToggleMode>k__BackingField: 0
   <SelectThreshold>k__BackingField: 0.9
   <DeselectThreshold>k__BackingField: 0.1
@@ -1229,95 +1229,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 102724795}
   m_CullTransparentMesh: 1
---- !u!1001 &104782544
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.1108
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_Name
-      value: RubiksCube2
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6745302439343835087, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 3940a7658692e0047aac8452e250f1d7, type: 2}
-    - target: {fileID: 6745302439343835087, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_Materials.Array.data[1]
-      value: 
-      objectReference: {fileID: 2100000, guid: db61b94b23e5fb444b86c231d13e46ef, type: 2}
-    - target: {fileID: 6745302439343835087, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_Materials.Array.data[2]
-      value: 
-      objectReference: {fileID: 2100000, guid: 0bd06e950ac4aa341bf4abc3c456b841, type: 2}
-    - target: {fileID: 6745302439343835087, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-      propertyPath: m_Materials.Array.data[3]
-      value: 
-      objectReference: {fileID: 2100000, guid: b1b2f20dcaa2e34419a8b57f95aea2e4, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
 --- !u!1 &107578712
 GameObject:
   m_ObjectHideFlags: 0
@@ -2038,6 +1949,7 @@ MonoBehaviour:
         m_Calls: []
   disabledInteractorTypes:
   - reference: Microsoft.MixedReality.Toolkit.IGrabInteractor, Microsoft.MixedReality.Toolkit.Core
+  - reference: MixedReality.Toolkit.IGrabInteractor, MixedReality.Toolkit.Core
   <ToggleMode>k__BackingField: 0
   <SelectThreshold>k__BackingField: 0.9
   <DeselectThreshold>k__BackingField: 0.1
@@ -2127,15 +2039,15 @@ MonoBehaviour:
   <OnDisabled>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  smoothSelectedness: 1
+  smoothSelectionProgress: 1
   distanceSpaceMode: 1
   startPushPlane: -8.392723
   endPushPlane: -0.67
   returnSpeed: 0.25
   enforceFrontPush: 1
-  rejectXYRolloff: 1
-  rolloffXYDepth: 3
-  rejectZRolloff: 0
+  rejectXYRollOff: 1
+  rollOffXYDepth: 3
+  rejectZRollOff: 0
   extendSpeed: 0.5
 --- !u!82 &164181360
 AudioSource:
@@ -2297,128 +2209,39 @@ MonoBehaviour:
     - key: Disabled
       value:
         effects:
-        - rid: 0
-        - rid: 1393819269385945089
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: PassiveHover
       value:
         effects:
-        - rid: 1
-        - rid: 2
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: ActiveHover
       value:
         effects:
-        - rid: 3
-        - rid: 4
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: Select
       value:
         effects:
-        - rid: 5
+        - rid: -2
         isVariable: 1
     - key: Toggle
       value:
         effects:
-        - rid: 6
-        - rid: 1393819269385945090
+        - rid: -2
+        - rid: -2
         isVariable: 0
   interactable: {fileID: 164181359}
   animator: {fileID: 164181365}
   references:
     version: 2
     RefIds:
-    - rid: 0
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 606689975}
-        color: {r: 1, g: 1, b: 1, a: 0.5019608}
-        playbackMode: 0
-        blendMode: 2
-    - rid: 1
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: f8bf36502d9096a46abc953712b2eb77, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 2
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.1
-        tintables:
-        - {fileID: 1478176514}
-        color: {r: 1, g: 1, b: 1, a: 1}
-        playbackMode: 0
-        blendMode: 0
-    - rid: 3
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: 79c6ab7b5799345418a0d9950c64e20e, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 4
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 606689975}
-        color: {r: 0, g: 0, b: 0, a: 0.2}
-        playbackMode: 0
-        blendMode: 1
-    - rid: 5
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: fff9d0b22f52a554c9e5b92efc3bf3af, type: 2}
-        speed: 1
-        playbackMode: 1
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 6
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 606689975}
-        color: {r: 0, g: 0, b: 0, a: 0.2509804}
-        playbackMode: 0
-        blendMode: 1
-    - rid: 1393819269385945089
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 623147262}
-        - {fileID: 1637541539}
-        - {fileID: 1551655007}
-        - {fileID: 853624285}
-        - {fileID: 2012235316}
-        color: {r: 1, g: 1, b: 1, a: 0.5019608}
-        playbackMode: 0
-        blendMode: 2
-    - rid: 1393819269385945090
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 1551655007}
-        color: {r: 1, g: 1, b: 1, a: 1}
-        playbackMode: 0
-        blendMode: 0
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!95 &164181365
 Animator:
   serializedVersion: 5
@@ -2899,10 +2722,10 @@ RectTransform:
   m_Father: {fileID: 1787408550}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 31.855, y: -24.999994}
-  m_SizeDelta: {x: 43.71, y: 49.99999}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &224152334
 MonoBehaviour:
@@ -5149,7 +4972,7 @@ MonoBehaviour:
     - key: ActiveHover
       value:
         effects:
-        - rid: 0
+        - rid: -2
         isVariable: 0
     - key: Select
       value:
@@ -5164,15 +4987,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 0
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: db3fc7cc13721f64dbb178a22ada2195, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!95 &467502868
 Animator:
   serializedVersion: 5
@@ -7817,62 +7633,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
-  UsePoseSmoothing: 0
-  AnimationCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 3.3333333
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.3
-      value: 1
-      inSlope: 3.3333333
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  OnTargetFound:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 17150268}
-        m_TargetAssemblyTypeName: OriginAlignment, Assembly-CSharp
-        m_MethodName: set_VuforiaTargetFound
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  OnTargetLost:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 17150268}
-        m_TargetAssemblyTypeName: OriginAlignment, Assembly-CSharp
-        m_MethodName: set_VuforiaTargetFound
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &793121656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7885,21 +7645,6 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreviewVisible: 1
-  RuntimeOcclusion: 0
-  RuntimeCollider: 0
-  mTrackableName: rubix_marker_2
-  mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Rubiks.xml
-  mAspectRatio: 1
-  mImageTargetType: 0
-  mWidth: 0.05
-  mHeight: 0.05
-  mRuntimeTexture: {fileID: 0}
-  mMotionHint: 1
-  mTrackingOptimization: 0
-  mTrackingOptimizationNeedsUpgrade: 0
-  mPreview: {fileID: 793121658}
 --- !u!4 &793121657
 Transform:
   m_ObjectHideFlags: 0
@@ -7913,7 +7658,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &793121658
 MonoBehaviour:
@@ -7927,13 +7672,6 @@ MonoBehaviour:
   m_Script: {fileID: 1778676317, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 793121656}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: rubix_marker_2
-  mDatasetName: Vuforia/Rubiks.xml
-  mCastedBehaviour: {fileID: 793121656}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
 --- !u!1 &804616139
 GameObject:
   m_ObjectHideFlags: 0
@@ -8691,8 +8429,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7568d513059a33547a13cac7472f5add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serverConnect: 0
-  serverAddress: 10.220.54.222
+  serverConnect: 1
+  serverAddress: 10.220.56.100
 --- !u!4 &850263254
 Transform:
   m_ObjectHideFlags: 0
@@ -8706,7 +8444,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &850263255
 MonoBehaviour:
@@ -8808,10 +8546,10 @@ RectTransform:
   m_Father: {fileID: 726301949}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 31.855, y: -24.999994}
-  m_SizeDelta: {x: 43.71, y: 49.99999}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &853624284
 MonoBehaviour:
@@ -9812,7 +9550,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &967655301
 GameObject:
@@ -11382,7 +11120,6 @@ MonoBehaviour:
       m_Action: Main Camera - TPD - Rotation
       m_Flags: 0
     m_Flags: 0
-  m_HasMigratedActions: 1
 --- !u!114 &1079049507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11423,8 +11160,6 @@ MonoBehaviour:
   m_Script: {fileID: -1826476478, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mWorldCenterMode: 2
-  mWorldCenter: {fileID: 0}
 --- !u!81 &1079049510
 AudioListener:
   m_ObjectHideFlags: 0
@@ -17176,7 +16911,7 @@ MonoBehaviour:
     - key: ActiveHover
       value:
         effects:
-        - rid: 0
+        - rid: -2
         isVariable: 0
     - key: Select
       value:
@@ -17191,15 +16926,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 0
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: db3fc7cc13721f64dbb178a22ada2195, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!95 &1664493061
 Animator:
   serializedVersion: 5
@@ -18018,6 +17746,10 @@ PrefabInstance:
       propertyPath: m_CameraYOffset
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4896910010284183127, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
+      propertyPath: modeOnSelect.priority
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 5241231772802432720, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
       propertyPath: prioritizedInteractionModes.Array.size
       value: 6
@@ -18032,7 +17764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5241231772802432720, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
       propertyPath: prioritizedInteractionModes.Array.data[6].modeName
-      value: GazeSelect
+      value: FlatScreen
       objectReference: {fileID: 0}
     - target: {fileID: 5241231772802432720, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
       propertyPath: prioritizedInteractionModes.Array.data[4].associatedTypes.Array.size
@@ -18040,7 +17772,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5241231772802432720, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
       propertyPath: prioritizedInteractionModes.Array.data[6].associatedTypes.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5241231772802432720, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
       propertyPath: prioritizedInteractionModes.Array.data[4].associatedTypes.Array.data[0].reference
@@ -18052,7 +17784,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5241231772802432720, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
       propertyPath: prioritizedInteractionModes.Array.data[6].associatedTypes.Array.data[0].reference
-      value: Microsoft.MixedReality.Toolkit.Input.GazeInteractor, Microsoft.MixedReality.Toolkit.Input
+      value: Microsoft.MixedReality.Toolkit.UX.CanvasProxyInteractor, Microsoft.MixedReality.Toolkit.UXCore
       objectReference: {fileID: 0}
     - target: {fileID: 5241231772802432720, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
       propertyPath: prioritizedInteractionModes.Array.data[6].associatedTypes.Array.data[1].reference
@@ -18085,6 +17817,10 @@ PrefabInstance:
     - target: {fileID: 6056176063914695530, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8386996556897629391, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
+      propertyPath: flatScreenInteractionMode.priority
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d7e2f87fefe0ba468719b15288b46e7, type: 3}
@@ -18917,6 +18653,7 @@ MonoBehaviour:
         m_Calls: []
   disabledInteractorTypes:
   - reference: Microsoft.MixedReality.Toolkit.IGrabInteractor, Microsoft.MixedReality.Toolkit.Core
+  - reference: MixedReality.Toolkit.IGrabInteractor, MixedReality.Toolkit.Core
   <ToggleMode>k__BackingField: 0
   <SelectThreshold>k__BackingField: 0.9
   <DeselectThreshold>k__BackingField: 0.1
@@ -19006,15 +18743,15 @@ MonoBehaviour:
   <OnDisabled>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  smoothSelectedness: 1
+  smoothSelectionProgress: 1
   distanceSpaceMode: 1
   startPushPlane: -8.392723
   endPushPlane: -0.67
   returnSpeed: 0.25
   enforceFrontPush: 1
-  rejectXYRolloff: 1
-  rolloffXYDepth: 3
-  rejectZRolloff: 0
+  rejectXYRollOff: 1
+  rollOffXYDepth: 3
+  rejectZRollOff: 0
   extendSpeed: 0.5
 --- !u!82 &1789701445
 AudioSource:
@@ -19176,128 +18913,39 @@ MonoBehaviour:
     - key: Disabled
       value:
         effects:
-        - rid: 0
-        - rid: 1393819269385945089
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: PassiveHover
       value:
         effects:
-        - rid: 1
-        - rid: 2
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: ActiveHover
       value:
         effects:
-        - rid: 3
-        - rid: 4
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: Select
       value:
         effects:
-        - rid: 5
+        - rid: -2
         isVariable: 1
     - key: Toggle
       value:
         effects:
-        - rid: 6
-        - rid: 1393819269385945090
+        - rid: -2
+        - rid: -2
         isVariable: 0
   interactable: {fileID: 1789701444}
   animator: {fileID: 1789701450}
   references:
     version: 2
     RefIds:
-    - rid: 0
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 557978027}
-        color: {r: 1, g: 1, b: 1, a: 0.5019608}
-        playbackMode: 0
-        blendMode: 2
-    - rid: 1
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: f8bf36502d9096a46abc953712b2eb77, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 2
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.1
-        tintables:
-        - {fileID: 178190588}
-        color: {r: 1, g: 1, b: 1, a: 1}
-        playbackMode: 0
-        blendMode: 0
-    - rid: 3
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: 79c6ab7b5799345418a0d9950c64e20e, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 4
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 557978027}
-        color: {r: 0, g: 0, b: 0, a: 0.2}
-        playbackMode: 0
-        blendMode: 1
-    - rid: 5
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: fff9d0b22f52a554c9e5b92efc3bf3af, type: 2}
-        speed: 1
-        playbackMode: 1
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 6
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 557978027}
-        color: {r: 0, g: 0, b: 0, a: 0.2509804}
-        playbackMode: 0
-        blendMode: 1
-    - rid: 1393819269385945089
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 1110380681}
-        - {fileID: 789385444}
-        - {fileID: 107578716}
-        - {fileID: 224152335}
-        - {fileID: 901643314}
-        color: {r: 1, g: 1, b: 1, a: 0.5019608}
-        playbackMode: 0
-        blendMode: 2
-    - rid: 1393819269385945090
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 107578716}
-        color: {r: 1, g: 1, b: 1, a: 1}
-        playbackMode: 0
-        blendMode: 0
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!95 &1789701450
 Animator:
   serializedVersion: 5
@@ -22190,285 +21838,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015284910}
   m_Mesh: {fileID: 4300000, guid: 350ca4e076aa4fbf9531e1a12bd1529e, type: 3}
---- !u!1 &2024340136 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-  m_PrefabInstance: {fileID: 104782544}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2024340137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024340136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9ad66e7cc9a2754d8ea989740c9f00d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_InteractionManager: {fileID: 0}
-  m_Colliders: []
-  m_InteractionLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_InteractionLayers:
-    m_Bits: 1
-  m_DistanceCalculationMode: 1
-  m_SelectMode: 1
-  m_FocusMode: 1
-  m_CustomReticle: {fileID: 0}
-  m_AllowGazeInteraction: 0
-  m_AllowGazeSelect: 0
-  m_OverrideGazeTimeToSelect: 0
-  m_GazeTimeToSelect: 0.5
-  m_OverrideTimeToAutoDeselectGaze: 0
-  m_TimeToAutoDeselectGaze: 3
-  m_AllowGazeAssistance: 0
-  m_FirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_HoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_SelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FirstFocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_LastFocusExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FocusExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Activated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Deactivated:
-    m_PersistentCalls:
-      m_Calls: []
-  m_StartingHoverFilters: []
-  m_StartingSelectFilters: []
-  m_StartingInteractionStrengthFilters: []
-  m_OnFirstHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnLastHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnHoverExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectEntered:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectExited:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnSelectCanceled:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnActivate:
-    m_PersistentCalls:
-      m_Calls: []
-  m_OnDeactivate:
-    m_PersistentCalls:
-      m_Calls: []
-  isGazePinchSelected:
-    active: 0
-    onEntered:
-      m_PersistentCalls:
-        m_Calls: []
-    onExited:
-      m_PersistentCalls:
-        m_Calls: []
-  isRaySelected:
-    active: 0
-    onEntered:
-      m_PersistentCalls:
-        m_Calls: []
-    onExited:
-      m_PersistentCalls:
-        m_Calls: []
-  isPokeSelected:
-    active: 0
-    onEntered:
-      m_PersistentCalls:
-        m_Calls: []
-    onExited:
-      m_PersistentCalls:
-        m_Calls: []
-  isGrabSelected:
-    active: 0
-    onEntered:
-      m_PersistentCalls:
-        m_Calls: []
-    onExited:
-      m_PersistentCalls:
-        m_Calls: []
-  isGazeHovered:
-    active: 0
-    onEntered:
-      m_PersistentCalls:
-        m_Calls: []
-    onExited:
-      m_PersistentCalls:
-        m_Calls: []
-  isGazePinchHovered:
-    active: 0
-    onEntered:
-      m_PersistentCalls:
-        m_Calls: []
-    onExited:
-      m_PersistentCalls:
-        m_Calls: []
-  isRayHovered:
-    active: 0
-    onEntered:
-      m_PersistentCalls:
-        m_Calls: []
-    onExited:
-      m_PersistentCalls:
-        m_Calls: []
-  isGrabHovered:
-    active: 0
-    onEntered:
-      m_PersistentCalls:
-        m_Calls: []
-    onExited:
-      m_PersistentCalls:
-        m_Calls: []
-  isPokeHovered:
-    active: 0
-    onEntered:
-      m_PersistentCalls:
-        m_Calls: []
-    onExited:
-      m_PersistentCalls:
-        m_Calls: []
-  isActiveHovered:
-    active: 0
-    onEntered:
-      m_PersistentCalls:
-        m_Calls: []
-    onExited:
-      m_PersistentCalls:
-        m_Calls: []
-  disabledInteractorTypes:
-  - reference: Microsoft.MixedReality.Toolkit.IPokeInteractor, Microsoft.MixedReality.Toolkit.Core
-  <ToggleMode>k__BackingField: 0
-  <SelectThreshold>k__BackingField: 0.9
-  <DeselectThreshold>k__BackingField: 0.1
-  <TriggerOnRelease>k__BackingField: 1
-  <UseGazeDwell>k__BackingField: 0
-  <GazeDwellTime>k__BackingField: 1
-  <UseFarDwell>k__BackingField: 0
-  <FarDwellTime>k__BackingField: 1
-  allowSelectByVoice: 1
-  speechRecognitionKeyword: select
-  <VoiceRequiresFocus>k__BackingField: 1
-  <SelectRequiresHover>k__BackingField: 0
-  <IsToggled>k__BackingField:
-    active: 0
-    onEntered:
-      m_PersistentCalls:
-        m_Calls: []
-    onExited:
-      m_PersistentCalls:
-        m_Calls: []
-  <OnClicked>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []
-  <OnEnabled>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []
-  <OnDisabled>k__BackingField:
-    m_PersistentCalls:
-      m_Calls: []
-  hostTransform: {fileID: 2024340140}
-  allowedManipulations: 7
-  allowedInteractionTypes: -2147483641
-  applyTorque: 1
-  springForceSoftness: 0.1
-  springTorqueSoftness: 0.1
-  springDamping: 1
-  springForceLimit: 100
-  rotationAnchorNear: 1
-  rotationAnchorFar: 1
-  releaseBehavior: 3
-  transformSmoothingLogicType:
-    reference: Microsoft.MixedReality.Toolkit.SpatialManipulation.DefaultTransformSmoothingLogic,
-      Microsoft.MixedReality.Toolkit.SpatialManipulation
-  smoothingFar: 1
-  smoothingNear: 1
-  moveLerpTime: 0.001
-  rotateLerpTime: 0.001
-  scaleLerpTime: 0.001
-  enableConstraints: 1
-  constraintsManager: {fileID: 2024340138}
-  manipulationLogicTypes:
-    moveLogicType:
-      reference: Microsoft.MixedReality.Toolkit.SpatialManipulation.MoveLogic, Microsoft.MixedReality.Toolkit.SpatialManipulation
-    rotateLogicType:
-      reference: Microsoft.MixedReality.Toolkit.SpatialManipulation.RotateLogic,
-        Microsoft.MixedReality.Toolkit.SpatialManipulation
-    scaleLogicType:
-      reference: Microsoft.MixedReality.Toolkit.SpatialManipulation.ScaleLogic, Microsoft.MixedReality.Toolkit.SpatialManipulation
---- !u!114 &2024340138
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024340136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50cdab0cd5a0916419324bb54314773d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  autoConstraintSelection: 1
-  selectedConstraints: []
---- !u!65 &2024340139
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024340136}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 5.9231777, y: 5.9231777, z: 5.9231777}
-  m_Center: {x: 0, y: 0, z: -0.03841126}
---- !u!4 &2024340140 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9ef87106dfe2c894ba9eef345569c518, type: 3}
-  m_PrefabInstance: {fileID: 104782544}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2027068512
 GameObject:
   m_ObjectHideFlags: 0
@@ -23084,6 +22453,7 @@ MonoBehaviour:
         m_Calls: []
   disabledInteractorTypes:
   - reference: Microsoft.MixedReality.Toolkit.IPokeInteractor, Microsoft.MixedReality.Toolkit.Core
+  - reference: MixedReality.Toolkit.IPokeInteractor, MixedReality.Toolkit.Core
   <ToggleMode>k__BackingField: 0
   <SelectThreshold>k__BackingField: 0.9
   <DeselectThreshold>k__BackingField: 0.1
@@ -24465,7 +23835,7 @@ MonoBehaviour:
     - key: ActiveHover
       value:
         effects:
-        - rid: 0
+        - rid: -2
         isVariable: 0
     - key: Select
       value:
@@ -24480,15 +23850,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 0
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: db3fc7cc13721f64dbb178a22ada2195, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!222 &3088929077596832625
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24821,6 +24184,7 @@ MonoBehaviour:
         m_Calls: []
   disabledInteractorTypes:
   - reference: Microsoft.MixedReality.Toolkit.IGrabInteractor, Microsoft.MixedReality.Toolkit.Core
+  - reference: MixedReality.Toolkit.IGrabInteractor, MixedReality.Toolkit.Core
   <ToggleMode>k__BackingField: 0
   <SelectThreshold>k__BackingField: 0.9
   <DeselectThreshold>k__BackingField: 0.1
@@ -24874,15 +24238,15 @@ MonoBehaviour:
   <OnDisabled>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  smoothSelectedness: 1
+  smoothSelectionProgress: 1
   distanceSpaceMode: 1
   startPushPlane: -8.392723
   endPushPlane: -0.67
   returnSpeed: 0.25
   enforceFrontPush: 1
-  rejectXYRolloff: 1
-  rolloffXYDepth: 3
-  rejectZRolloff: 0
+  rejectXYRollOff: 1
+  rollOffXYDepth: 3
+  rejectZRollOff: 0
   extendSpeed: 0.5
 --- !u!114 &3272651954962375657
 MonoBehaviour:
@@ -25546,128 +24910,39 @@ MonoBehaviour:
     - key: Disabled
       value:
         effects:
-        - rid: 0
-        - rid: 1393819269385945089
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: PassiveHover
       value:
         effects:
-        - rid: 1
-        - rid: 2
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: ActiveHover
       value:
         effects:
-        - rid: 3
-        - rid: 4
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: Select
       value:
         effects:
-        - rid: 5
+        - rid: -2
         isVariable: 1
     - key: Toggle
       value:
         effects:
-        - rid: 6
-        - rid: 1393819269385945090
+        - rid: -2
+        - rid: -2
         isVariable: 0
   interactable: {fileID: 8233867085246059837}
   animator: {fileID: 8233867085246059833}
   references:
     version: 2
     RefIds:
-    - rid: 0
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 4354081992710676231}
-        color: {r: 1, g: 1, b: 1, a: 0.5019608}
-        playbackMode: 0
-        blendMode: 2
-    - rid: 1
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: f8bf36502d9096a46abc953712b2eb77, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 2
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.1
-        tintables:
-        - {fileID: 5111590994056038526}
-        color: {r: 1, g: 1, b: 1, a: 1}
-        playbackMode: 0
-        blendMode: 0
-    - rid: 3
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: 79c6ab7b5799345418a0d9950c64e20e, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 4
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 4354081992710676231}
-        color: {r: 0, g: 0, b: 0, a: 0.2}
-        playbackMode: 0
-        blendMode: 1
-    - rid: 5
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: fff9d0b22f52a554c9e5b92efc3bf3af, type: 2}
-        speed: 1
-        playbackMode: 1
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 6
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 4354081992710676231}
-        color: {r: 0, g: 0, b: 0, a: 0.2509804}
-        playbackMode: 0
-        blendMode: 1
-    - rid: 1393819269385945089
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 1771482350520606834}
-        - {fileID: 8333238402731580590}
-        - {fileID: 8357441019776601175}
-        - {fileID: 2077945573633227528}
-        - {fileID: 4669383059746099860}
-        color: {r: 1, g: 1, b: 1, a: 0.5019608}
-        playbackMode: 0
-        blendMode: 2
-    - rid: 1393819269385945090
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 8357441019776601175}
-        color: {r: 1, g: 1, b: 1, a: 1}
-        playbackMode: 0
-        blendMode: 0
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!114 &4219361018778367177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27034,128 +26309,39 @@ MonoBehaviour:
     - key: Disabled
       value:
         effects:
-        - rid: 0
-        - rid: 1393819269385945089
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: PassiveHover
       value:
         effects:
-        - rid: 1
-        - rid: 2
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: ActiveHover
       value:
         effects:
-        - rid: 3
-        - rid: 4
+        - rid: -2
+        - rid: -2
         isVariable: 0
     - key: Select
       value:
         effects:
-        - rid: 5
+        - rid: -2
         isVariable: 1
     - key: Toggle
       value:
         effects:
-        - rid: 6
-        - rid: 1393819269385945090
+        - rid: -2
+        - rid: -2
         isVariable: 0
   interactable: {fileID: 3272651954962375656}
   animator: {fileID: 3272651954962375660}
   references:
     version: 2
     RefIds:
-    - rid: 0
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 7152445600895314386}
-        color: {r: 1, g: 1, b: 1, a: 0.5019608}
-        playbackMode: 0
-        blendMode: 2
-    - rid: 1
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: f8bf36502d9096a46abc953712b2eb77, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 2
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.1
-        tintables:
-        - {fileID: 1864029606916505259}
-        color: {r: 1, g: 1, b: 1, a: 1}
-        playbackMode: 0
-        blendMode: 0
-    - rid: 3
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: 79c6ab7b5799345418a0d9950c64e20e, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 4
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 7152445600895314386}
-        color: {r: 0, g: 0, b: 0, a: 0.2}
-        playbackMode: 0
-        blendMode: 1
-    - rid: 5
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: fff9d0b22f52a554c9e5b92efc3bf3af, type: 2}
-        speed: 1
-        playbackMode: 1
-        weightMode: 0
-        transitionDuration: 0
-    - rid: 6
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 7152445600895314386}
-        color: {r: 0, g: 0, b: 0, a: 0.2509804}
-        playbackMode: 0
-        blendMode: 1
-    - rid: 1393819269385945089
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 5168945105595127463}
-        - {fileID: 3209876643987319419}
-        - {fileID: 3230701286442302082}
-        - {fileID: 4897666370564165085}
-        - {fileID: 2297577736882807873}
-        color: {r: 1, g: 1, b: 1, a: 0.5019608}
-        playbackMode: 0
-        blendMode: 2
-    - rid: 1393819269385945090
-      type: {class: GraphicTintEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: GraphicTint
-        transitionDuration: 0.15
-        tintables:
-        - {fileID: 3230701286442302082}
-        color: {r: 1, g: 1, b: 1, a: 1}
-        playbackMode: 0
-        blendMode: 0
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &7497180418372063132
 GameObject:
   m_ObjectHideFlags: 0
@@ -27799,6 +26985,7 @@ MonoBehaviour:
         m_Calls: []
   disabledInteractorTypes:
   - reference: Microsoft.MixedReality.Toolkit.IGrabInteractor, Microsoft.MixedReality.Toolkit.Core
+  - reference: MixedReality.Toolkit.IGrabInteractor, MixedReality.Toolkit.Core
   <ToggleMode>k__BackingField: 0
   <SelectThreshold>k__BackingField: 0.9
   <DeselectThreshold>k__BackingField: 0.1
@@ -27852,15 +27039,15 @@ MonoBehaviour:
   <OnDisabled>k__BackingField:
     m_PersistentCalls:
       m_Calls: []
-  smoothSelectedness: 1
+  smoothSelectionProgress: 1
   distanceSpaceMode: 1
   startPushPlane: -8.392723
   endPushPlane: -0.67
   returnSpeed: 0.25
   enforceFrontPush: 1
-  rejectXYRolloff: 1
-  rolloffXYDepth: 3
-  rejectZRolloff: 0
+  rejectXYRollOff: 1
+  rollOffXYDepth: 3
+  rejectZRollOff: 0
   extendSpeed: 0.5
 --- !u!114 &8233867085246059838
 MonoBehaviour:
@@ -28079,7 +27266,7 @@ MonoBehaviour:
     - key: ActiveHover
       value:
         effects:
-        - rid: 0
+        - rid: -2
         isVariable: 0
     - key: Select
       value:
@@ -28094,15 +27281,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 0
-      type: {class: AnimationEffect, ns: Microsoft.MixedReality.Toolkit.UX, asm: Microsoft.MixedReality.Toolkit.UXCore}
-      data:
-        name: Animation
-        clip: {fileID: 7400000, guid: db3fc7cc13721f64dbb178a22ada2195, type: 2}
-        speed: 1
-        playbackMode: 0
-        weightMode: 0
-        transitionDuration: 0
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!95 &8480623119495814308
 Animator:
   serializedVersion: 5

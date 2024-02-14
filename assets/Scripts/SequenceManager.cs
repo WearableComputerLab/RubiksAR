@@ -1,9 +1,9 @@
+using MixedReality.Toolkit.Input;
+using MixedReality.Toolkit.SpatialManipulation;
+using MixedReality.Toolkit.UX;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Microsoft.MixedReality.Toolkit.Input;
-using Microsoft.MixedReality.Toolkit.SpatialManipulation;
-using Microsoft.MixedReality.Toolkit.UX;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -95,19 +95,20 @@ public class SequenceManager : MonoBehaviour
         infoVis.gameObject.SetActive(true);
     }
 
-    private void ToggleAlignment(bool toggle)
+    /*private void ToggleAlignment(bool toggle)
     {
+        Debug.Log("Alignment Active: " + toggle);
         _alignmentActive = toggle;
         origin.GetComponent<ObjectManipulator>().enabled = toggle;
         origin.GetComponent<BoundsControl>().enabled = toggle;
-    }
+    }*/
     
     private void Update()
     {
-        if (Input.GetKeyUp(KeyCode.L))
+       /* if (Input.GetKeyUp(KeyCode.L))
         {
             ToggleAlignment(!_alignmentActive);
-        }
+        }*/
         
         if (_experimentPaused) return;
         if (!_canSendGaze) return;

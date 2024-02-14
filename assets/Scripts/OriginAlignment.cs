@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OriginAlignment : MonoBehaviour
 {
-    [SerializeField]
+    /*[SerializeField]
     protected DefaultObserverEventHandler vuforiaTarget;
 
     private bool _vuforiaTargetFound;
@@ -29,7 +29,7 @@ public class OriginAlignment : MonoBehaviour
             transform.rotation = vuforiaTarget.transform.rotation;
         }
         
-    }
+    }*/
     
     
 }
