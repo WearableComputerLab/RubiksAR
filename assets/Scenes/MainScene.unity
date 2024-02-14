@@ -8529,7 +8529,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7568d513059a33547a13cac7472f5add, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  serverConnect: 0
+  serverConnect: 1
   serverAddress: localhost
 --- !u!4 &850263254
 Transform:
@@ -11261,8 +11261,6 @@ MonoBehaviour:
   m_Script: {fileID: -1826476478, guid: 1e108ae5f2133934f948edded555f03e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mWorldCenterMode: 2
-  mWorldCenter: {fileID: 0}
 --- !u!81 &1079049510
 AudioListener:
   m_ObjectHideFlags: 0
